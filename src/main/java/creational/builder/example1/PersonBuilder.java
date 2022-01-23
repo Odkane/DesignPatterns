@@ -1,4 +1,4 @@
-package Creational.Builder.firstWay;
+package creational.builder.example1;
 
 import java.time.LocalDate;
 

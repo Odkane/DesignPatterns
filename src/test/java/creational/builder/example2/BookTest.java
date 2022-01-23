@@ -1,9 +1,8 @@
-package Creational.Builder.secondWay;
+package creational.builder.example2;
 
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
 
@@ -13,17 +12,31 @@ class BookTest {
                 .name("The Last")
                 .author("Gemini")
                 .yearOfPublication(2020)
-                .editor("Corona")
+                .editor("Samstag")
                 .build();
 
         assertThat(actual.getName()).isEqualTo("The Last");
         assertThat(actual.getAuthor()).isEqualTo("Gemini");
         assertThat(actual.getYearOfPublication()).isEqualTo(2020);
-        assertThat(actual.getEditor()).isEqualTo("Corona");
+        assertThat(actual.getEditor()).isEqualTo("Samstag");
     }
 
     @Test
     void should_check_book_with_fields_not_set() {
+        var actual = Book.builder()
+                .name("The Last")
+                .author("Gemini")
+                .editor("Samstag")
+                .build();
+
+        assertThat(actual.getName()).isEqualTo("The Last");
+        assertThat(actual.getAuthor()).isEqualTo("Gemini");
+        assertThat(actual.getYearOfPublication()).isZero();
+        assertThat(actual.getEditor()).isEqualTo("Samstag");
+    }
+
+    @Test
+    void should_check_book_if_default_editor_is_set() {
         var actual = Book.builder()
                 .name("The Last")
                 .author("Gemini")
@@ -33,7 +46,8 @@ class BookTest {
         assertThat(actual.getName()).isEqualTo("The Last");
         assertThat(actual.getAuthor()).isEqualTo("Gemini");
         assertThat(actual.getYearOfPublication()).isEqualTo(2020);
-        assertThat(actual.getEditor()).isNull();
+        assertThat(actual.getEditor()).isNotNull();
+        assertThat(actual.getEditor()).isEqualTo("Corona");
     }
 
 }

@@ -1,6 +1,5 @@
-package Creational.Builder.firstWay;
+package creational.builder.example1;
 
-import Creational.Builder.firstWay.Person;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

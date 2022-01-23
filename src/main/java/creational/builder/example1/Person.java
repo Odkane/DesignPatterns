@@ -1,11 +1,11 @@
-package Creational.Builder.firstWay;
+package creational.builder.example1;
 
 import java.time.LocalDate;
 
 public class Person {
-    private String firstName;
-    private String lastName;
-    private LocalDate birthdate;
+    private final String firstName;
+    private final String lastName;
+    private final LocalDate birthdate;
 
     public String getFirstName() {
         return firstName;

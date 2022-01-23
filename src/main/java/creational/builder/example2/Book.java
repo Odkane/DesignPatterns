@@ -1,11 +1,12 @@
-package Creational.Builder.secondWay;
+package creational.builder.example2;
+
 
 public class Book {
 
-    private String name;
-    private String author;
-    private int yearOfPublication;
-    private String editor;
+    private final String name;
+    private final String author;
+    private final int yearOfPublication;
+    private final String editor;
 
     public Book(String name, String author, int yearOfPublication, String editor) {
         this.name = name;
@@ -39,7 +40,7 @@ public class Book {
         private String name;
         private String author;
         private int yearOfPublication;
-        private String editor;
+        private String editor="Corona";
 
         public BookBuilder name(String name){
             this.name = name;
