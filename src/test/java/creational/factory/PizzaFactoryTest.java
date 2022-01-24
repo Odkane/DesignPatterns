@@ -1,11 +1,17 @@
 package creational.factory;
 
 import creational.factory.concreteclasses.*;
+import creational.factory.factories.ChicagoPizzaFactory;
+import creational.factory.factories.NYPizzaFactory;
+import creational.factory.factories.PizzaFactory;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static creational.factory.PizzaType.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,7 +19,11 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 class PizzaFactoryTest {
+
+    @Captor
+    private ArgumentCaptor<String> ingredientCaptor;
 
     @ParameterizedTest
     @EnumSource(value = PizzaType.class, names = {"UNKNOWN"}, mode = EnumSource.Mode.EXCLUDE)
@@ -24,16 +34,7 @@ class PizzaFactoryTest {
 
         factory.makePizza(type);
 
-        ArgumentCaptor<String> ingredientCaptor = ArgumentCaptor.forClass(String.class);
-
-        verify(pizzaMock).start();
-        verify(pizzaMock).addIngredient(ingredientCaptor.capture());
-
-        assertThat(ingredientCaptor.getValue()).isEqualTo("tomato");
-        verify(pizzaMock).bake();
-        verify(pizzaMock).cut();
-        verify(pizzaMock).box();
-        verify(pizzaMock).delivery();
+        verifyAllMethodCalls(pizzaMock);
     }
 
     @ParameterizedTest
@@ -45,17 +46,7 @@ class PizzaFactoryTest {
 
         factory.makePizza(type);
 
-        ArgumentCaptor<String> ingredientCaptor = ArgumentCaptor.forClass(String.class);
-
-        verify(pizzaMock).start();
-
-        verify(pizzaMock).addIngredient(ingredientCaptor.capture());
-        assertThat(ingredientCaptor.getValue()).isEqualTo("tomato");
-
-        verify(pizzaMock).bake();
-        verify(pizzaMock).cut();
-        verify(pizzaMock).box();
-        verify(pizzaMock).delivery();
+        verifyAllMethodCalls(pizzaMock);
     }
 
 
@@ -85,5 +76,14 @@ class PizzaFactoryTest {
                 .hasMessage("Type unknown");
     }
 
+    private void verifyAllMethodCalls(Pizza pizzaMock) {
+        verify(pizzaMock).start();
+        verify(pizzaMock).addIngredient(ingredientCaptor.capture());
+        assertThat(ingredientCaptor.getValue()).isEqualTo("tomato");
+        verify(pizzaMock).bake();
+        verify(pizzaMock).cut();
+        verify(pizzaMock).box();
+        verify(pizzaMock).delivery();
+    }
 
 }

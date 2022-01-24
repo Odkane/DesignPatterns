@@ -1,5 +1,7 @@
 package creational.factory;
 
+import creational.factory.factories.ChicagoPizzaFactory;
+import creational.factory.factories.NYPizzaFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

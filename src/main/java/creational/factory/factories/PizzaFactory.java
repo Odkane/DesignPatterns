@@ -1,4 +1,7 @@
-package creational.factory;
+package creational.factory.factories;
+
+import creational.factory.Pizza;
+import creational.factory.PizzaType;
 
 public abstract class PizzaFactory {
 
@@ -15,6 +18,6 @@ public abstract class PizzaFactory {
         return pizza;
     }
 
-    abstract Pizza createPizza(PizzaType type);
+    public abstract Pizza createPizza(PizzaType type);
 
 }

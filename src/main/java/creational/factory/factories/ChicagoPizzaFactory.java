@@ -1,10 +1,12 @@
-package creational.factory;
+package creational.factory.factories;
 
+import creational.factory.Pizza;
+import creational.factory.PizzaType;
 import creational.factory.concreteclasses.ChicagoStyleCheesePizza;
 import creational.factory.concreteclasses.ChicagoStyleVeggiePizza;
 import creational.factory.concreteclasses.ChicagoSytlePepperoniPizza;
 
-public class ChicagoPizzaFactory extends PizzaFactory{
+public class ChicagoPizzaFactory extends PizzaFactory {
 
     @Override
     public Pizza createPizza(PizzaType type){

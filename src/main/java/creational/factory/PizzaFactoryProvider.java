@@ -1,5 +1,9 @@
 package creational.factory;
 
+import creational.factory.factories.ChicagoPizzaFactory;
+import creational.factory.factories.NYPizzaFactory;
+import creational.factory.factories.PizzaFactory;
+
 public class PizzaFactoryProvider {
 
     PizzaFactory getFactory(String factoryType){

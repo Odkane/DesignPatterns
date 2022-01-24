@@ -3,6 +3,7 @@ package creational.factory;
 import creational.factory.concreteclasses.NYStyleCheesePizza;
 import creational.factory.concreteclasses.NYStylePepperoniPizza;
 import creational.factory.concreteclasses.NYStyleVeggiePizza;
+import creational.factory.factories.NYPizzaFactory;
 import org.junit.jupiter.api.Test;
 
 import static creational.factory.PizzaType.*;

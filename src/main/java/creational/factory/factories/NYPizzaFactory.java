@@ -1,5 +1,7 @@
-package creational.factory;
+package creational.factory.factories;
 
+import creational.factory.Pizza;
+import creational.factory.PizzaType;
 import creational.factory.concreteclasses.NYStyleCheesePizza;
 import creational.factory.concreteclasses.NYStyleVeggiePizza;
 import creational.factory.concreteclasses.NYStylePepperoniPizza;
