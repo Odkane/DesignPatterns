@@ -1,9 +1,10 @@
 package creational.factory;
 
-import creational.factory.concreteclasses.NYStyleCheesePizza;
-import creational.factory.concreteclasses.NYStylePepperoniPizza;
-import creational.factory.concreteclasses.NYStyleVeggiePizza;
+import creational.factory.products.NYStyleCheesePizza;
+import creational.factory.products.NYStylePepperoniPizza;
+import creational.factory.products.NYStyleVeggiePizza;
 import creational.factory.factories.NYPizzaFactory;
+import creational.factory.factories.PizzaFactory;
 import org.junit.jupiter.api.Test;
 
 import static creational.factory.PizzaType.*;
@@ -14,16 +15,16 @@ class NYPizzaFactoryTest {
 
     @Test
     void createPizzaTest() {
-        var nyPizzaFactory = new NYPizzaFactory();
+        PizzaFactory factory = new NYPizzaFactory();
 
-        assertThat(nyPizzaFactory.createPizza(CHEESE)).isInstanceOf(NYStyleCheesePizza.class);
-        assertThat(nyPizzaFactory.createPizza(PEPPERONI)).isInstanceOf(NYStylePepperoniPizza.class);
-        assertThat(nyPizzaFactory.createPizza(VEGGIE)).isInstanceOf(NYStyleVeggiePizza.class);
-        assertThatThrownBy(() -> nyPizzaFactory.createPizza(PizzaType.UNKNOWN))
+        assertThat(factory.createPizza(CHEESE)).isInstanceOf(NYStyleCheesePizza.class);
+        assertThat(factory.createPizza(PEPPERONI)).isInstanceOf(NYStylePepperoniPizza.class);
+        assertThat(factory.createPizza(VEGGIE)).isInstanceOf(NYStyleVeggiePizza.class);
+        assertThatThrownBy(() -> factory.createPizza(PizzaType.UNKNOWN))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("Type unknown");
 
-        assertThatThrownBy(() -> nyPizzaFactory.createPizza(PizzaType.of("THUNFISCH")))
+        assertThatThrownBy(() -> factory.createPizza(PizzaType.of("THUNFISCH")))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("Type unknown");
     }

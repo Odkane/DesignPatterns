@@ -1,4 +1,4 @@
-package creational.builder.example1;
+package creational.builder.person;
 
 import java.time.LocalDate;
 

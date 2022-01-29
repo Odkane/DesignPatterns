@@ -1,10 +1,10 @@
 package creational.factory.factories;
 
-import creational.factory.Pizza;
+import creational.factory.products.Pizza;
 import creational.factory.PizzaType;
-import creational.factory.concreteclasses.ChicagoStyleCheesePizza;
-import creational.factory.concreteclasses.ChicagoStyleVeggiePizza;
-import creational.factory.concreteclasses.ChicagoSytlePepperoniPizza;
+import creational.factory.products.ChicagoStyleCheesePizza;
+import creational.factory.products.ChicagoStyleVeggiePizza;
+import creational.factory.products.ChicagoSytlePepperoniPizza;
 
 public class ChicagoPizzaFactory extends PizzaFactory {
 
@@ -12,11 +12,11 @@ public class ChicagoPizzaFactory extends PizzaFactory {
     public Pizza createPizza(PizzaType type){
         switch(type) {
             case PEPPERONI:
-                return new ChicagoSytlePepperoniPizza();
+                return new ChicagoSytlePepperoniPizza("Chicago Style Pepperoni Pizza");
             case CHEESE:
-                return new ChicagoStyleCheesePizza();
+                return new ChicagoStyleCheesePizza("Chicago Style Cheese Pizza");
             case VEGGIE:
-                return new ChicagoStyleVeggiePizza();
+                return new ChicagoStyleVeggiePizza("Chicago Style Veggie Pizza");
             default :
                 throw new IllegalArgumentException("Type unknown");
         }

@@ -1,6 +1,6 @@
 package creational.factory;
 
-import creational.factory.concreteclasses.*;
+import creational.factory.products.*;
 import creational.factory.factories.ChicagoPizzaFactory;
 import creational.factory.factories.NYPizzaFactory;
 import creational.factory.factories.PizzaFactory;

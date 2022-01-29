@@ -1,4 +1,4 @@
-package creational.builder.example2;
+package creational.builder.book;
 
 
 public class Book {
