@@ -20,6 +20,7 @@ class VehicleTest {
         auto2.insertVehicle("Cupra Born");
         auto2.insertVehicle("Hyundai Ioniq 5");
 
+        assertThat(auto == auto2).isFalse(); // Because it is not the same Instance(not the same Adresse of the Class), just the same Reference of the fields
         assertThat(auto.getVehicleList()).hasSize(4);
         assertThat(auto2.getVehicleList()).hasSize(4);
     }
