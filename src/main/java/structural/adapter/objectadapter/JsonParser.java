@@ -1,7 +1,5 @@
 package structural.adapter.objectadapter;
 
-import static java.lang.String.*;
-
 public class JsonParser {
 
     public String convertJson(String filename){
