@@ -1,5 +1,7 @@
 package structural.bridge;
 
+import java.text.DecimalFormat;
+
 public class Client {
 
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class Client {
         circle.setColor(new RedColor());
 
         circle.fillShape();
-        System.out.println("Area of the shape 1 : " + circle.getArea());
+        System.out.println("Area of the shape 1 : " + new DecimalFormat("#.##").format(circle.getArea()));
 
         System.out.println("------------------------------------------");
         System.out.println("Defining Shape 2 : ");
