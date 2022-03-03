@@ -3,7 +3,6 @@ plugins {
 }
 
 group 'org.gemini'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
