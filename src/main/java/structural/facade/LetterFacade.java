@@ -3,6 +3,7 @@ package structural.facade;
 public class LetterFacade {
 
     public void writeAndSend(String fileName){
+
         Computer computer = new Computer();
         computer.on();
 
@@ -18,11 +19,11 @@ public class LetterFacade {
         Pencil pencil = new Pencil();
         pencil.sign(document);
 
-        Stamp stamp = new Stamp();
-        stamp.stamp(document);
-
         StampMachine stampMachine = new StampMachine();
         stampMachine.buyStamp(document, 2);
+
+        Stamp stamp = new Stamp();
+        stamp.stamp(document);
 
         Postbox postbox = new Postbox();
         postbox.send(document);
