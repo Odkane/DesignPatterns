@@ -4,10 +4,16 @@ import java.util.Random;
 
 public enum Color {
 
-    BLUE("Blue"), GREEN("Green"), YELLOW("Yellow"), WHITE("White"), BLACK("Black");
+    BLUE("blue"), GREEN("green"), YELLOW("yellow"), WHITE("white"), BLACK("black");
 
-    Color(String color) {
+    private final String colorName;
 
+    Color(String colorName) {
+        this.colorName = colorName;
+    }
+
+    public String getName() {
+        return colorName;
     }
 
     static Color getRandomColor() {
