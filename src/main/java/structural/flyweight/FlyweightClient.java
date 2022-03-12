@@ -15,6 +15,7 @@ public class FlyweightClient {
     private static int getRandomX() {
         return (int)(Math.random()*100 );
     }
+
     private static int getRandomY() {
         return (int)(Math.random()*100);
     }

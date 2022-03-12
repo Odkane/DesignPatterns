@@ -1,7 +1,11 @@
 package structural.flyweight;
 
+import lombok.Getter;
 import java.util.Random;
 
+import static lombok.AccessLevel.PRIVATE;
+
+@Getter(PRIVATE)
 public enum Brand {
 
     AUDI("Audi"),
@@ -12,7 +16,10 @@ public enum Brand {
     CUPRA("Cupra"),
     OPEL("Opel");
 
+    private final String brandName;
+
     Brand(String brandName) {
+        this.brandName=brandName;
     }
 
     static Brand getRandomBrand() {
