@@ -19,6 +19,5 @@ public class BusinessCardDesigner {
         BusinessCardDesigner cardDesigner = new BusinessCardDesigner();
 
         System.out.println(cardDesigner.designCard(employee));
-
     }
 }

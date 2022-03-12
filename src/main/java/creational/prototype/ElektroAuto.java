@@ -1,7 +1,5 @@
 package creational.prototype;
 
-import lombok.NoArgsConstructor;
-
 public class ElektroAuto extends Vehicle{
 
     public ElektroAuto() {
