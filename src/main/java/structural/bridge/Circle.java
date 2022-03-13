@@ -1,7 +1,5 @@
 package structural.bridge;
 
-import java.text.DecimalFormat;
-
 public class Circle extends Shape{
 
     private final double radius;

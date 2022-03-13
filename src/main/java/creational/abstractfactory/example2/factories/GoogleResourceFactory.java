@@ -1,6 +1,6 @@
 package creational.abstractfactory.example2.factories;
 
-import creational.abstractfactory.example2.*;
+import creational.abstractfactory.example2.Capacity;
 import creational.abstractfactory.example2.products.GCP.GoogleCloudStorage;
 import creational.abstractfactory.example2.products.GCP.GoogleComputeEngineInstance;
 import creational.abstractfactory.example2.products.Instance;

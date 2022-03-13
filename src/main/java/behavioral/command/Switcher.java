@@ -2,7 +2,6 @@ package behavioral.command;
 
 import java.util.ArrayDeque;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.Queue;
 
 //Invoker
@@ -45,5 +44,4 @@ public class Switcher {
             commandQueue.poll().unexecute();
         }
     }
-
 }

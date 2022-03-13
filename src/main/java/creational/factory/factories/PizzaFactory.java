@@ -1,7 +1,7 @@
 package creational.factory.factories;
 
-import creational.factory.products.Pizza;
 import creational.factory.PizzaType;
+import creational.factory.products.Pizza;
 
 public abstract class PizzaFactory {
 

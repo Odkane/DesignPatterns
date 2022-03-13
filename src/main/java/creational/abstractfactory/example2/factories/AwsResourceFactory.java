@@ -1,6 +1,6 @@
 package creational.abstractfactory.example2.factories;
 
-import creational.abstractfactory.example2.*;
+import creational.abstractfactory.example2.Capacity;
 import creational.abstractfactory.example2.products.AWS.Ec2Instance;
 import creational.abstractfactory.example2.products.AWS.S3Storage;
 import creational.abstractfactory.example2.products.Instance;

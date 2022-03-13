@@ -1,10 +1,10 @@
 package creational.factory.factories;
 
-import creational.factory.products.Pizza;
 import creational.factory.PizzaType;
 import creational.factory.products.NYStyleCheesePizza;
-import creational.factory.products.NYStyleVeggiePizza;
 import creational.factory.products.NYStylePepperoniPizza;
+import creational.factory.products.NYStyleVeggiePizza;
+import creational.factory.products.Pizza;
 
 public class NYPizzaFactory extends PizzaFactory {
     @Override

@@ -1,10 +1,10 @@
 package creational.factory.factories;
 
-import creational.factory.products.Pizza;
 import creational.factory.PizzaType;
 import creational.factory.products.ChicagoStyleCheesePizza;
 import creational.factory.products.ChicagoStyleVeggiePizza;
 import creational.factory.products.ChicagoSytlePepperoniPizza;
+import creational.factory.products.Pizza;
 
 public class ChicagoPizzaFactory extends PizzaFactory {
 

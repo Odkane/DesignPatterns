@@ -1,6 +1,7 @@
 package structural.flyweight;
 
 import lombok.Getter;
+
 import java.util.Random;
 
 import static lombok.AccessLevel.PRIVATE;
