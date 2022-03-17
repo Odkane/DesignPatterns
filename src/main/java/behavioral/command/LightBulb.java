@@ -15,9 +15,12 @@ public class LightBulb {
     }
 
     public void lightOn(){
-        isBulbOn = true;
-        lightIntensity = 5;
-        System.out.println("Bulb is turned on. Intensity of Light at : "+ lightIntensity +"0%");
+        if (!isBulbOn) {
+            isBulbOn = true;
+            lightIntensity = 5;
+            System.out.println("Bulb is turned on. Intensity of Light at : "+ lightIntensity +"0%");
+        }
+        System.out.println("Bulb is on. Intensity of Light at : "+ lightIntensity +"0%");
     }
 
     public void lightOff(){

@@ -8,7 +8,6 @@ import java.time.LocalDate;
 @Setter
 @Getter
 public class Post {
-
     private int id;
     private String title;
     private String description;
