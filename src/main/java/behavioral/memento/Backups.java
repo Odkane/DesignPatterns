@@ -1,26 +1,16 @@
 package behavioral.memento;
 
 import java.time.Instant;
-import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Backups {
-    private static final Backups INSTANCE = new Backups();
     private final Map<String, EditorMemento> backupsMap;
 
-    private Backups() {
+    public Backups() {
         backupsMap = new LinkedHashMap<>();
-    }
-
-    public static Backups getInstance() {
-        return INSTANCE;
-    }
-
-    public Map<String, EditorMemento> getBackupsMap() {
-        return backupsMap;
     }
 
     public void save(EditorMemento memento){

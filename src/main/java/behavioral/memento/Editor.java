@@ -4,15 +4,11 @@ import java.util.Map;
 import java.util.Optional;
 
 public class Editor {
-    private final static Backups backups = Backups.getInstance();
+    private final Backups backups = new Backups();
     private String content;
 
     public Editor() {
         content = "";
-    }
-
-    public Editor(String content) {
-        this.content = content;
     }
 
     public String getContent() {
