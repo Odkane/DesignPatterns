@@ -2,8 +2,13 @@ package behavioral.strategy.example1;
 
 public class Duck {
 
-    private FlyBehavior flyBehavior;
-    private QuackBehavior quackBehavior;
+    private final FlyBehavior flyBehavior;
+    private final QuackBehavior quackBehavior;
+
+    public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavior = quackBehavior;
+    }
 
     public void performFly(){
         System.out.println(this.getClass().getSimpleName() + " " + flyBehavior.fly());
