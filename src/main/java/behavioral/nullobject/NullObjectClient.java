@@ -1,7 +1,5 @@
 package behavioral.nullobject;
 
-import lombok.SneakyThrows;
-
 public class NullObjectClient {
 
 

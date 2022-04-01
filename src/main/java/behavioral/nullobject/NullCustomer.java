@@ -1,8 +1,5 @@
 package behavioral.nullobject;
 
-import java.util.Collections;
-import java.util.List;
-
 public class NullCustomer extends Customer {
 
     public NullCustomer(String name) {

@@ -1,10 +1,10 @@
 package creational.factory;
 
+import creational.factory.factories.ChicagoPizzaFactory;
+import creational.factory.factories.PizzaFactory;
 import creational.factory.products.ChicagoStyleCheesePizza;
 import creational.factory.products.ChicagoStyleVeggiePizza;
 import creational.factory.products.ChicagoSytlePepperoniPizza;
-import creational.factory.factories.ChicagoPizzaFactory;
-import creational.factory.factories.PizzaFactory;
 import org.junit.jupiter.api.Test;
 
 import static creational.factory.PizzaType.*;

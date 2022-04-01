@@ -1,9 +1,9 @@
 package creational.factory;
 
-import creational.factory.products.*;
 import creational.factory.factories.ChicagoPizzaFactory;
 import creational.factory.factories.NYPizzaFactory;
 import creational.factory.factories.PizzaFactory;
+import creational.factory.products.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;

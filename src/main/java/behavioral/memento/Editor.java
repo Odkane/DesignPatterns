@@ -1,6 +1,5 @@
 package behavioral.memento;
 
-import java.util.Map;
 import java.util.Optional;
 
 public class Editor {
