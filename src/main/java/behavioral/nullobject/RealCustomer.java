@@ -1,6 +1,7 @@
 package behavioral.nullobject;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.stream.Collectors;
 
 public class RealCustomer extends Customer {
@@ -22,13 +23,16 @@ public class RealCustomer extends Customer {
     @Override
     public String getOrders() {
         System.out.println("List of orders for the customer " + getName());
-        return ordersList.stream().map (order -> String.format("- Article : %s bought at %s",order.getArticle(),order.getOrderTime())).collect(Collectors.joining(" \n"));
+        return ordersList.stream()
+                .map (order -> String.format("- Article : %s bought at %s",
+                                order.getArticle(),order.getOrderTime()))
+                .collect(Collectors.joining(" \n"));
     }
 
     @Override
     public void buy(String article) {
         var order = new Order(LocalDateTime.now(), article);
         ordersList.add(order);
-        System.out.printf("Article %s bought successfully by customer: %s \n",article, this.getName());
+        System.out.printf("Article %s bought successfully by customer: %s \n", article, this.getName());
     }
 }
