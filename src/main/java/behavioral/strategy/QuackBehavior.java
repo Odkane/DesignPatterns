@@ -1,4 +1,4 @@
-package behavioral.strategy.example1;
+package behavioral.strategy;
 
 public interface QuackBehavior {
     String quack();
