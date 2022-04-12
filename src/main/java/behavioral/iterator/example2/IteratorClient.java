@@ -7,11 +7,11 @@ public class IteratorClient {
 
     public static void main(String[] args) {
         RadioStation[] stations = new RadioStation[5];
-        stations[0] = new RadioStation("Radio LOS SANTOS", "106.1 FM");
-        stations[1] = new RadioStation("CSR", "103.9FM");
+        stations[0] = new RadioStation("Bounce FM", "91.9FM");
+        stations[1] = new RadioStation("Blonded Los Santos", "97.8 FM");
         stations[2] = new RadioStation("Master SOUND", "98.3 FM");
-        stations[3] = new RadioStation("Bounce FM", "91.9FM");
-        stations[4] = new RadioStation("Blonded Los Santos", "97.8 FM");
+        stations[3] = new RadioStation("CSR", "103.9FM");
+        stations[4] = new RadioStation("Radio LOS SANTOS", "106.1 FM");
         StationList list = new StationList();
         StationsArray array = new StationsArray();
         Arrays.stream(stations).forEach(station -> {
